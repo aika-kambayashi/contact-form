@@ -14,13 +14,13 @@ class FormController extends Controller {
         $form = $this->db_manager->get('Form')->getFormModel();
 
         //セッションから情報を取得
-        $session_form = $this->sessions->get("form");
+        $session_form = $this->session->get("form");
         //セッション情報があれば、配列同士をマージする
         if(!is_null($session_form)) {
             $form = array_merge($form,$session_form);
         }
         //Viewテンプレートに渡すデータ配列作成
-        $data = [ 'form' => $form ];
+        $data = [ "form" => $form ];
         return $this->render($data);
     }
 }

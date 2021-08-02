@@ -3,7 +3,7 @@
 <form action="<?php echo $base_url; ?>/form/confirm" method="post">
     <?php if (isset($errors) && count($errors) > 0): ?>
         <?php echo $this->render('errors', ['errors' => $errors]); ?>
-    <?php end if; ?>
+    <?php endif; ?>
 
     <table>
         <tbody>
@@ -29,7 +29,7 @@
             </tr>
             <tr>
                 <th>コメント</th>
-                <td><textarea name="comment" rows="4" cols="40"><?php echo $this->escape($form['comment']); ?>" /></textarea></td>
+                <td><textarea name="comment" rows="4" cols="40"><?php echo $this->escape($form['comment']); ?></textarea></td>
             </tr>
         </tbody>
     </table>
