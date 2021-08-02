@@ -31,6 +31,10 @@
             <th>コメント</th>
             <td><?php echo $this->escape($form['comment']); ?></td>
         </tr>
+        <tr>
+            <th>メールアドレス</th>
+            <td><?php echo $this->escape($form['mail_address']); ?></td>
+        </tr>
     </tbody>
 </table>
 <form action="<?php echo $base_url; ?>/form/complete" method="post">

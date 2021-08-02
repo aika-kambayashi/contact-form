@@ -49,6 +49,10 @@ class FormController extends Controller {
         } else if(!is_numeric($form['age'])) {
             $errors[] = '年齢は数値を入力して得ください';
         }
+        //メールアドレスの必須チェック
+        if(empty($form['mail_address'])) {
+            $errors[] = 'メールアドレスは必須です';
+        }
         //エラーがない場合、確認画面を表示
         if (count($errors) === 0) {
             //入力されたデータをセッションに格納

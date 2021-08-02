@@ -31,6 +31,10 @@
                 <th>コメント</th>
                 <td><textarea name="comment" rows="4" cols="40"><?php echo $this->escape($form['comment']); ?></textarea></td>
             </tr>
+            <tr>
+                <th>メールアドレス</th>
+                <td><input type="text" name="mail_address" value="<?php echo $this->escape($form['mail_address']); ?>" /></td>
+            </tr>
         </tbody>
     </table>
     <p><input type="submit" value="確認画面へ" /></p>
