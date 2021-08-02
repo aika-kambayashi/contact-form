@@ -1,6 +1,7 @@
 <?php
 
 class FormRepository extends DbRepository {
+
     public function getFormModel() {
         //フォームの入力データモデル配列
         $data = [
@@ -12,5 +13,14 @@ class FormRepository extends DbRepository {
             'comment'       => '',
         ];
         return $data;
+    }
+
+    public function insert($form) {
+        //プリペアステートメント用のSQL作成
+        $sql = "
+            insert into form(name,age,prefecture,address1,address2,comment) values(:name,:age,:prefecture,:address1,:address2,:comment)
+        ";
+        //SQL実行
+        $stmt = $this->execute($sql,$form);
     }
 }
