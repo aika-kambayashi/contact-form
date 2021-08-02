@@ -22,7 +22,7 @@ class ContactFormApplication extends Application {
 
     protected function configure() {
         $this->db_manager->connect('master', [
-            'dsn'       => 'mysql:dbname=contact_form;hosst=localhost;charset=utf8',
+            'dsn'       => 'mysql:dbname=contact_form;host=localhost;charset=utf8',
             'user'      => 'root',
             'password'  => '',
         ]);
